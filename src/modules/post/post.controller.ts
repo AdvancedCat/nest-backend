@@ -19,4 +19,9 @@ export class PostController {
   async getAllUsers(): Promise<PostModel[]> {
     return this.prismaService.post.findMany();
   }
+
+  @Get('/:id')
+  async getPostById(@Param('id') id: string): Promise<PostModel> {
+    return this.prismaService.post.findUnique({ where: { id: Number(id) } });
+  }
 }
