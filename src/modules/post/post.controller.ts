@@ -9,7 +9,7 @@ import {
   Query,
 } from '@nestjs/common';
 import { Post as PostModel, Prisma } from '@prisma/client';
-import { PrismaService } from '@app/services/PrismaService';
+import { PrismaService } from '../prisma/prisma.service';
 
 @Controller('post')
 export class PostController {
