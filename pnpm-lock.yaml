@@ -6,6 +6,7 @@ specifiers:
   '@nestjs/core': ^9.0.0
   '@nestjs/platform-express': ^9.0.0
   '@nestjs/schematics': ^9.0.0
+  '@nestjs/swagger': ^6.3.0
   '@nestjs/testing': ^9.0.0
   '@prisma/client': 4.13.0
   '@types/express': ^4.17.13
@@ -24,6 +25,7 @@ specifiers:
   rxjs: ^7.2.0
   source-map-support: ^0.5.20
   supertest: ^6.1.3
+  swagger-ui-express: ^4.6.3
   ts-jest: 29.0.3
   ts-loader: ^9.2.3
   ts-node: ^10.0.0
@@ -36,9 +38,11 @@ dependencies:
   '@nestjs/common': registry.npmjs.org/@nestjs/common/9.4.0_atc7tu2sld2m3nk4hmwkqn6qde
   '@nestjs/core': registry.npmjs.org/@nestjs/core/9.4.0_s52inwjga72fw7w7ilq4rk5hru
   '@nestjs/platform-express': registry.npmjs.org/@nestjs/platform-express/9.4.0_gqkob5jndcfeb3wjw72wbdwyne
+  '@nestjs/swagger': registry.npmjs.org/@nestjs/swagger/6.3.0_oapxqihqbztbu6zsycplsfizdq
   '@prisma/client': registry.npmjs.org/@prisma/client/4.13.0_prisma@4.13.0
   reflect-metadata: registry.npmjs.org/reflect-metadata/0.1.13
   rxjs: registry.npmjs.org/rxjs/7.8.1
+  swagger-ui-express: registry.npmjs.org/swagger-ui-express/4.6.3
 
 devDependencies:
   '@nestjs/cli': registry.npmjs.org/@nestjs/cli/9.4.2
@@ -1416,6 +1420,26 @@ packages:
     transitivePeerDependencies:
       - encoding
 
+  registry.npmjs.org/@nestjs/mapped-types/1.2.2_6r5ladex5hev3tpeuknr3oj3pe:
+    resolution: {integrity: sha512-3dHxLXs3M0GPiriAcCFFJQHoDFUuzTD5w6JDhE7TyfT89YKpe6tcCCIqOZWdXmt9AZjjK30RkHRSFF+QEnWFQg==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/@nestjs/mapped-types/-/mapped-types-1.2.2.tgz}
+    id: registry.npmjs.org/@nestjs/mapped-types/1.2.2
+    name: '@nestjs/mapped-types'
+    version: 1.2.2
+    peerDependencies:
+      '@nestjs/common': ^7.0.8 || ^8.0.0 || ^9.0.0
+      class-transformer: ^0.2.0 || ^0.3.0 || ^0.4.0 || ^0.5.0
+      class-validator: ^0.11.1 || ^0.12.0 || ^0.13.0 || ^0.14.0
+      reflect-metadata: ^0.1.12
+    peerDependenciesMeta:
+      class-transformer:
+        optional: true
+      class-validator:
+        optional: true
+    dependencies:
+      '@nestjs/common': registry.npmjs.org/@nestjs/common/9.4.0_atc7tu2sld2m3nk4hmwkqn6qde
+      reflect-metadata: registry.npmjs.org/reflect-metadata/0.1.13
+    dev: false
+
   registry.npmjs.org/@nestjs/platform-express/9.4.0_gqkob5jndcfeb3wjw72wbdwyne:
     resolution: {integrity: sha512-PpnfghpNq7mwG43z3+pacHulsabUCBMla4nUikntXT525ORpZSDvh/nLi1HLfE4w5+FcINc8/RBOyYTeRVmiRQ==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/@nestjs/platform-express/-/platform-express-9.4.0.tgz}
     id: registry.npmjs.org/@nestjs/platform-express/9.4.0
@@ -1468,6 +1492,36 @@ packages:
     transitivePeerDependencies:
       - chokidar
     dev: true
+
+  registry.npmjs.org/@nestjs/swagger/6.3.0_oapxqihqbztbu6zsycplsfizdq:
+    resolution: {integrity: sha512-Gnig189oa1tD+h0BYIfUwhp/wvvmTn6iO3csR2E4rQrDTgCxSxZDlNdfZo3AC+Rmf8u0KX4ZAX1RZN1qXTtC7A==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/@nestjs/swagger/-/swagger-6.3.0.tgz}
+    id: registry.npmjs.org/@nestjs/swagger/6.3.0
+    name: '@nestjs/swagger'
+    version: 6.3.0
+    peerDependencies:
+      '@fastify/static': ^6.0.0
+      '@nestjs/common': ^9.0.0
+      '@nestjs/core': ^9.0.0
+      class-transformer: '*'
+      class-validator: '*'
+      reflect-metadata: ^0.1.12
+    peerDependenciesMeta:
+      '@fastify/static':
+        optional: true
+      class-transformer:
+        optional: true
+      class-validator:
+        optional: true
+    dependencies:
+      '@nestjs/common': registry.npmjs.org/@nestjs/common/9.4.0_atc7tu2sld2m3nk4hmwkqn6qde
+      '@nestjs/core': registry.npmjs.org/@nestjs/core/9.4.0_s52inwjga72fw7w7ilq4rk5hru
+      '@nestjs/mapped-types': registry.npmjs.org/@nestjs/mapped-types/1.2.2_6r5ladex5hev3tpeuknr3oj3pe
+      js-yaml: registry.npmjs.org/js-yaml/4.1.0
+      lodash: registry.npmjs.org/lodash/4.17.21
+      path-to-regexp: registry.npmjs.org/path-to-regexp/3.2.0
+      reflect-metadata: registry.npmjs.org/reflect-metadata/0.1.13
+      swagger-ui-dist: registry.npmjs.org/swagger-ui-dist/4.18.2
+    dev: false
 
   registry.npmjs.org/@nestjs/testing/9.4.0_adbpomi7iuzlxxwntv6inkfmju:
     resolution: {integrity: sha512-xZWp363P4otcebg++gSjUcdCfTK0RorORzyFq3aLaSAQOlq8kxfFDRIKzEATR4aOUfqTMMsAA8lhnMJWf35N6A==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/@nestjs/testing/-/testing-9.4.0.tgz}
@@ -2329,7 +2383,6 @@ packages:
     resolution: {integrity: sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/argparse/-/argparse-2.0.1.tgz}
     name: argparse
     version: 2.0.1
-    dev: true
 
   registry.npmjs.org/array-flatten/1.1.1:
     resolution: {integrity: sha512-PCVAQswWemu6UdxsDFFX/+gVeYqKAod3D3UVm91jHwynguOwAvYPhx8nNlM++NqRcK6CxxpUafjmhIdKiHibqg==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/array-flatten/-/array-flatten-1.1.1.tgz}
@@ -4695,7 +4748,6 @@ packages:
     hasBin: true
     dependencies:
       argparse: registry.npmjs.org/argparse/2.0.1
-    dev: true
 
   registry.npmjs.org/jsesc/2.5.2:
     resolution: {integrity: sha512-OYu7XEzjkCQ3C5Ps3QIZsQfNpqoJyZZA99wd9aWd05NCtC5pWOkShK2mkL6HXQR6/Cy2lbNdPlZBpuQHXE63gA==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/jsesc/-/jsesc-2.5.2.tgz}
@@ -4824,7 +4876,6 @@ packages:
     resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/lodash/-/lodash-4.17.21.tgz}
     name: lodash
     version: 4.17.21
-    dev: true
 
   registry.npmjs.org/log-symbols/4.1.0:
     resolution: {integrity: sha512-8XPvpAA8uyhfteu8pIvQxpJZ7SYYdpUivZpGy6sFsBuKRY/7rQGavedeB8aK+Zkyq6upMFVL/9AW6vOYzfRyLg==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/log-symbols/-/log-symbols-4.1.0.tgz}
@@ -6055,6 +6106,29 @@ packages:
     version: 1.0.0
     engines: {node: '>= 0.4'}
     dev: true
+
+  registry.npmjs.org/swagger-ui-dist/4.18.2:
+    resolution: {integrity: sha512-oVBoBl9Dg+VJw8uRWDxlyUyHoNEDC0c1ysT6+Boy6CTgr2rUcLcfPon4RvxgS2/taNW6O0+US+Z/dlAsWFjOAQ==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/swagger-ui-dist/-/swagger-ui-dist-4.18.2.tgz}
+    name: swagger-ui-dist
+    version: 4.18.2
+    dev: false
+
+  registry.npmjs.org/swagger-ui-dist/4.18.3:
+    resolution: {integrity: sha512-QW280Uvt234+TLo9NMPRa2Sj17RoorbQlR2eEY4R6Cs0LbdXhiO14YWX9OPBkBdiN64GQYz4zU8wlHLVi81lBg==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/swagger-ui-dist/-/swagger-ui-dist-4.18.3.tgz}
+    name: swagger-ui-dist
+    version: 4.18.3
+    dev: false
+
+  registry.npmjs.org/swagger-ui-express/4.6.3:
+    resolution: {integrity: sha512-CDje4PndhTD2HkgyKH3pab+LKspDeB/NhPN2OF1j+piYIamQqBYwAXWESOT1Yju2xFg51bRW9sUng2WxDjzArw==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/swagger-ui-express/-/swagger-ui-express-4.6.3.tgz}
+    name: swagger-ui-express
+    version: 4.6.3
+    engines: {node: '>= v0.10.32'}
+    peerDependencies:
+      express: '>=4.0.0 || >=5.0.0-beta'
+    dependencies:
+      swagger-ui-dist: registry.npmjs.org/swagger-ui-dist/4.18.3
+    dev: false
 
   registry.npmjs.org/symbol-observable/4.0.0:
     resolution: {integrity: sha512-b19dMThMV4HVFynSAM1++gBHAbk2Tc/osgLIBZMKsyqh34jb2e8Os7T6ZW/Bt3pJFdBTd2JwAnAAEQV7rSNvcQ==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/symbol-observable/-/symbol-observable-4.0.0.tgz}

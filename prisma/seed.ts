@@ -1,70 +1,46 @@
-import { PrismaClient, Prisma } from '@prisma/client'
+// prisma/seed.ts
 
-const prisma = new PrismaClient()
+import { PrismaClient } from '@prisma/client';
 
-const userData: Prisma.UserCreateInput[] = [
-  {
-    name: 'Alice',
-    email: 'alice@prisma.io',
-    posts: {
-      create: [
-        {
-          title: 'Join the Prisma Slack',
-          content: 'https://slack.prisma.io',
-          published: true,
-        },
-      ],
-    },
-  },
-  {
-    name: 'Nilu',
-    email: 'nilu@prisma.io',
-    posts: {
-      create: [
-        {
-          title: 'Follow Prisma on Twitter',
-          content: 'https://www.twitter.com/prisma',
-          published: true,
-        },
-      ],
-    },
-  },
-  {
-    name: 'Mahmoud',
-    email: 'mahmoud@prisma.io',
-    posts: {
-      create: [
-        {
-          title: 'Ask a question about Prisma on GitHub',
-          content: 'https://www.github.com/prisma/prisma/discussions',
-          published: true,
-        },
-        {
-          title: 'Prisma on YouTube',
-          content: 'https://pris.ly/youtube',
-        },
-      ],
-    },
-  },
-]
+// initialize Prisma Client
+const prisma = new PrismaClient();
 
 async function main() {
-  console.log(`Start seeding ...`)
-  for (const u of userData) {
-    const user = await prisma.user.create({
-      data: u,
-    })
-    console.log(`Created user with id: ${user.id}`)
-  }
-  console.log(`Seeding finished.`)
+  // create two dummy articles
+  const post1 = await prisma.article.upsert({
+    where: { title: 'Prisma Adds Support for MongoDB' },
+    update: {},
+    create: {
+      title: 'Prisma Adds Support for MongoDB',
+      body: 'Support for MongoDB has been one of the most requested features since the initial release of...',
+      description:
+        "We are excited to share that today's Prisma ORM release adds stable support for MongoDB!",
+      published: false,
+    },
+  });
+
+  const post2 = await prisma.article.upsert({
+    where: { title: "What's new in Prisma? (Q1/22)" },
+    update: {},
+    create: {
+      title: "What's new in Prisma? (Q1/22)",
+      body: 'Our engineers have been working hard, issuing new releases with many improvements...',
+      description:
+        'Learn about everything in the Prisma ecosystem and community from January to March 2022.',
+      published: true,
+    },
+  });
+
+  console.log({ post1, post2 });
 }
 
+// execute the main function
 main()
-  .then(async () => {
-    await prisma.$disconnect()
+  .catch((e) => {
+    console.error(e);
+    process.exit(1);
   })
-  .catch(async (e) => {
-    console.error(e)
-    await prisma.$disconnect()
-    process.exit(1)
-  })
+  .finally(async () => {
+    // close Prisma Client at the end
+    await prisma.$disconnect();
+  });
