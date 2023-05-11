@@ -15,6 +15,8 @@ specifiers:
   '@types/supertest': ^2.0.11
   '@typescript-eslint/eslint-plugin': ^5.0.0
   '@typescript-eslint/parser': ^5.0.0
+  class-transformer: ^0.5.1
+  class-validator: ^0.14.0
   eslint: ^8.0.1
   eslint-config-prettier: ^8.3.0
   eslint-plugin-prettier: ^4.0.0
@@ -35,11 +37,13 @@ specifiers:
   webpack: ^5.82.0
 
 dependencies:
-  '@nestjs/common': registry.npmjs.org/@nestjs/common/9.4.0_atc7tu2sld2m3nk4hmwkqn6qde
+  '@nestjs/common': registry.npmjs.org/@nestjs/common/9.4.0_j3td4gnlgk75ora6o6suo62byy
   '@nestjs/core': registry.npmjs.org/@nestjs/core/9.4.0_s52inwjga72fw7w7ilq4rk5hru
   '@nestjs/platform-express': registry.npmjs.org/@nestjs/platform-express/9.4.0_gqkob5jndcfeb3wjw72wbdwyne
-  '@nestjs/swagger': registry.npmjs.org/@nestjs/swagger/6.3.0_oapxqihqbztbu6zsycplsfizdq
+  '@nestjs/swagger': registry.npmjs.org/@nestjs/swagger/6.3.0_wgmggry273v4dignukmrfwr7na
   '@prisma/client': registry.npmjs.org/@prisma/client/4.13.0_prisma@4.13.0
+  class-transformer: registry.npmjs.org/class-transformer/0.5.1
+  class-validator: registry.npmjs.org/class-validator/0.14.0
   reflect-metadata: registry.npmjs.org/reflect-metadata/0.1.13
   rxjs: registry.npmjs.org/rxjs/7.8.1
   swagger-ui-express: registry.npmjs.org/swagger-ui-express/4.6.3
@@ -1361,7 +1365,7 @@ packages:
       - webpack-cli
     dev: true
 
-  registry.npmjs.org/@nestjs/common/9.4.0_atc7tu2sld2m3nk4hmwkqn6qde:
+  registry.npmjs.org/@nestjs/common/9.4.0_j3td4gnlgk75ora6o6suo62byy:
     resolution: {integrity: sha512-RUcVAQsEF4WPrmzFXEOUfZnPwrLTe1UVlzXTlSyfqfqbdWDPKDGlIPVelBLfc5/+RRUQ0I5iE4+CQvpCmkqldw==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/@nestjs/common/-/common-9.4.0.tgz}
     id: registry.npmjs.org/@nestjs/common/9.4.0
     name: '@nestjs/common'
@@ -1380,6 +1384,8 @@ packages:
       class-validator:
         optional: true
     dependencies:
+      class-transformer: registry.npmjs.org/class-transformer/0.5.1
+      class-validator: registry.npmjs.org/class-validator/0.14.0
       iterare: registry.npmjs.org/iterare/1.2.1
       reflect-metadata: registry.npmjs.org/reflect-metadata/0.1.13
       rxjs: registry.npmjs.org/rxjs/7.8.1
@@ -1407,7 +1413,7 @@ packages:
       '@nestjs/websockets':
         optional: true
     dependencies:
-      '@nestjs/common': registry.npmjs.org/@nestjs/common/9.4.0_atc7tu2sld2m3nk4hmwkqn6qde
+      '@nestjs/common': registry.npmjs.org/@nestjs/common/9.4.0_j3td4gnlgk75ora6o6suo62byy
       '@nestjs/platform-express': registry.npmjs.org/@nestjs/platform-express/9.4.0_gqkob5jndcfeb3wjw72wbdwyne
       '@nuxtjs/opencollective': registry.npmjs.org/@nuxtjs/opencollective/0.3.2
       fast-safe-stringify: registry.npmjs.org/fast-safe-stringify/2.1.1
@@ -1420,7 +1426,7 @@ packages:
     transitivePeerDependencies:
       - encoding
 
-  registry.npmjs.org/@nestjs/mapped-types/1.2.2_6r5ladex5hev3tpeuknr3oj3pe:
+  registry.npmjs.org/@nestjs/mapped-types/1.2.2_jbpjjfk2f2t4q57zuyaqjyvrsi:
     resolution: {integrity: sha512-3dHxLXs3M0GPiriAcCFFJQHoDFUuzTD5w6JDhE7TyfT89YKpe6tcCCIqOZWdXmt9AZjjK30RkHRSFF+QEnWFQg==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/@nestjs/mapped-types/-/mapped-types-1.2.2.tgz}
     id: registry.npmjs.org/@nestjs/mapped-types/1.2.2
     name: '@nestjs/mapped-types'
@@ -1436,7 +1442,9 @@ packages:
       class-validator:
         optional: true
     dependencies:
-      '@nestjs/common': registry.npmjs.org/@nestjs/common/9.4.0_atc7tu2sld2m3nk4hmwkqn6qde
+      '@nestjs/common': registry.npmjs.org/@nestjs/common/9.4.0_j3td4gnlgk75ora6o6suo62byy
+      class-transformer: registry.npmjs.org/class-transformer/0.5.1
+      class-validator: registry.npmjs.org/class-validator/0.14.0
       reflect-metadata: registry.npmjs.org/reflect-metadata/0.1.13
     dev: false
 
@@ -1449,7 +1457,7 @@ packages:
       '@nestjs/common': ^9.0.0
       '@nestjs/core': ^9.0.0
     dependencies:
-      '@nestjs/common': registry.npmjs.org/@nestjs/common/9.4.0_atc7tu2sld2m3nk4hmwkqn6qde
+      '@nestjs/common': registry.npmjs.org/@nestjs/common/9.4.0_j3td4gnlgk75ora6o6suo62byy
       '@nestjs/core': registry.npmjs.org/@nestjs/core/9.4.0_s52inwjga72fw7w7ilq4rk5hru
       body-parser: registry.npmjs.org/body-parser/1.20.2
       cors: registry.npmjs.org/cors/2.8.5
@@ -1493,7 +1501,7 @@ packages:
       - chokidar
     dev: true
 
-  registry.npmjs.org/@nestjs/swagger/6.3.0_oapxqihqbztbu6zsycplsfizdq:
+  registry.npmjs.org/@nestjs/swagger/6.3.0_wgmggry273v4dignukmrfwr7na:
     resolution: {integrity: sha512-Gnig189oa1tD+h0BYIfUwhp/wvvmTn6iO3csR2E4rQrDTgCxSxZDlNdfZo3AC+Rmf8u0KX4ZAX1RZN1qXTtC7A==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/@nestjs/swagger/-/swagger-6.3.0.tgz}
     id: registry.npmjs.org/@nestjs/swagger/6.3.0
     name: '@nestjs/swagger'
@@ -1513,9 +1521,11 @@ packages:
       class-validator:
         optional: true
     dependencies:
-      '@nestjs/common': registry.npmjs.org/@nestjs/common/9.4.0_atc7tu2sld2m3nk4hmwkqn6qde
+      '@nestjs/common': registry.npmjs.org/@nestjs/common/9.4.0_j3td4gnlgk75ora6o6suo62byy
       '@nestjs/core': registry.npmjs.org/@nestjs/core/9.4.0_s52inwjga72fw7w7ilq4rk5hru
-      '@nestjs/mapped-types': registry.npmjs.org/@nestjs/mapped-types/1.2.2_6r5ladex5hev3tpeuknr3oj3pe
+      '@nestjs/mapped-types': registry.npmjs.org/@nestjs/mapped-types/1.2.2_jbpjjfk2f2t4q57zuyaqjyvrsi
+      class-transformer: registry.npmjs.org/class-transformer/0.5.1
+      class-validator: registry.npmjs.org/class-validator/0.14.0
       js-yaml: registry.npmjs.org/js-yaml/4.1.0
       lodash: registry.npmjs.org/lodash/4.17.21
       path-to-regexp: registry.npmjs.org/path-to-regexp/3.2.0
@@ -1539,7 +1549,7 @@ packages:
       '@nestjs/platform-express':
         optional: true
     dependencies:
-      '@nestjs/common': registry.npmjs.org/@nestjs/common/9.4.0_atc7tu2sld2m3nk4hmwkqn6qde
+      '@nestjs/common': registry.npmjs.org/@nestjs/common/9.4.0_j3td4gnlgk75ora6o6suo62byy
       '@nestjs/core': registry.npmjs.org/@nestjs/core/9.4.0_s52inwjga72fw7w7ilq4rk5hru
       '@nestjs/platform-express': registry.npmjs.org/@nestjs/platform-express/9.4.0_gqkob5jndcfeb3wjw72wbdwyne
       tslib: registry.npmjs.org/tslib/2.5.0
@@ -1899,6 +1909,11 @@ packages:
     dependencies:
       '@types/superagent': registry.npmjs.org/@types/superagent/4.1.17
     dev: true
+
+  registry.npmjs.org/@types/validator/13.7.16:
+    resolution: {integrity: sha512-VyKmLktUHYLbrSbsRi241MSUlGYomQgK/tfCNpej3Gt5qDOM10AZ3nU2aR2s5JritClXuOBu4K7MkywVW/Y6Ow==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/@types/validator/-/validator-13.7.16.tgz}
+    name: '@types/validator'
+    version: 13.7.16
 
   registry.npmjs.org/@types/yargs-parser/21.0.0:
     resolution: {integrity: sha512-iO9ZQHkZxHn4mSakYV0vFHAVDyEOIJQrV2uZ06HxEPcx+mt8swXoZHIbaaJ2crJYFfErySgktuTZ3BeLz+XmFA==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/@types/yargs-parser/-/yargs-parser-21.0.0.tgz}
@@ -2752,6 +2767,20 @@ packages:
     name: cjs-module-lexer
     version: 1.2.2
     dev: true
+
+  registry.npmjs.org/class-transformer/0.5.1:
+    resolution: {integrity: sha512-SQa1Ws6hUbfC98vKGxZH3KFY0Y1lm5Zm0SY8XX9zbK7FJCyVEac3ATW0RIpwzW+oOfmHE5PMPufDG9hCfoEOMw==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/class-transformer/-/class-transformer-0.5.1.tgz}
+    name: class-transformer
+    version: 0.5.1
+
+  registry.npmjs.org/class-validator/0.14.0:
+    resolution: {integrity: sha512-ct3ltplN8I9fOwUd8GrP8UQixwff129BkEtuWDKL5W45cQuLd19xqmTLu5ge78YDm/fdje6FMt0hGOhl0lii3A==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/class-validator/-/class-validator-0.14.0.tgz}
+    name: class-validator
+    version: 0.14.0
+    dependencies:
+      '@types/validator': registry.npmjs.org/@types/validator/13.7.16
+      libphonenumber-js: registry.npmjs.org/libphonenumber-js/1.10.30
+      validator: registry.npmjs.org/validator/13.9.0
 
   registry.npmjs.org/cli-cursor/3.1.0:
     resolution: {integrity: sha512-I/zHAwsKf9FqGoXM4WWRACob9+SNukZTd94DWF57E4toouRulbCxcUh6RKUEOQlYTHJnzkPMySvPNaaSLNfLZw==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/cli-cursor/-/cli-cursor-3.1.0.tgz}
@@ -4829,6 +4858,11 @@ packages:
       type-check: registry.npmjs.org/type-check/0.4.0
     dev: true
 
+  registry.npmjs.org/libphonenumber-js/1.10.30:
+    resolution: {integrity: sha512-PLGc+xfrQrkya/YK2/5X+bPpxRmyJBHM+xxz9krUdSgk4Vs2ZwxX5/Ow0lv3r9PDlDtNWb4u+it8MY5rZ0IyGw==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/libphonenumber-js/-/libphonenumber-js-1.10.30.tgz}
+    name: libphonenumber-js
+    version: 1.10.30
+
   registry.npmjs.org/lines-and-columns/1.2.4:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/lines-and-columns/-/lines-and-columns-1.2.4.tgz}
     name: lines-and-columns
@@ -6563,6 +6597,12 @@ packages:
       '@types/istanbul-lib-coverage': registry.npmjs.org/@types/istanbul-lib-coverage/2.0.4
       convert-source-map: registry.npmjs.org/convert-source-map/1.9.0
     dev: true
+
+  registry.npmjs.org/validator/13.9.0:
+    resolution: {integrity: sha512-B+dGG8U3fdtM0/aNK4/X8CXq/EcxU2WPrPEkJGslb47qyHsxmbggTWK0yEA4qnYVNF+nxNlN88o14hIcPmSIEA==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/validator/-/validator-13.9.0.tgz}
+    name: validator
+    version: 13.9.0
+    engines: {node: '>= 0.10'}
 
   registry.npmjs.org/vary/1.1.2:
     resolution: {integrity: sha512-BNGbWLfd0eUPabhkXUVm0j8uuvREyTh5ovRa/dyow/BqAbZJyC+5fU+IzQOzmAKzYqYRAISoRhdQr3eIZ/PXqg==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/vary/-/vary-1.1.2.tgz}
