@@ -5,14 +5,13 @@ import { AppController } from './app.controller';
 import {PrismaModule} from './modules/prisma/prisma.module'
 
 // Biz
-// import { UserModule } from './modules/user/user.module';
-// import { PostModule } from './modules/post/post.module';
 import { ArticlesModule } from './modules/articles/articles.module';
+import { UsersModule } from './modules/users/users.module';
 
 // Services
 
 @Module({
-  imports: [PrismaModule, ArticlesModule],
+  imports: [PrismaModule, ArticlesModule, UsersModule],
   controllers: [AppController],
   providers: [],
 })
