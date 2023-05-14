@@ -1,5 +1,9 @@
 import { Module } from '@nestjs/common';
+import { APP_INTERCEPTOR } from '@nestjs/core';
 import { AppController } from './app.controller';
+
+// Interceptor
+import { LoggingInterceptor } from './interceptors/LoggingInterceptor';
 
 // Database
 import { PrismaModule } from './modules/prisma/prisma.module';
@@ -14,6 +18,9 @@ import { AuthModule } from './modules/auth/auth.module';
 @Module({
   imports: [PrismaModule, ArticlesModule, UsersModule, AuthModule],
   controllers: [AppController],
-  providers: [],
+  providers: [{
+    provide: APP_INTERCEPTOR,
+    useClass: LoggingInterceptor
+  }],
 })
 export class AppModule {}
