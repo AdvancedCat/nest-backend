@@ -1,6 +1,7 @@
 import { NestFactory, HttpAdapterHost, Reflector } from '@nestjs/core';
 import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 import { ValidationPipe, ClassSerializerInterceptor } from '@nestjs/common';
+import { NestExpressApplication } from '@nestjs/platform-express'
 import { AppModule } from './app.module';
 import { APP } from './app.config';
 
@@ -10,7 +11,7 @@ import { ResponseInterceptor } from '@app/interceptors/ResponseInterceptor';
 import { ErrorInterceptor } from './interceptors/ErrorInterceptor';
 
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule);
+  const app = await NestFactory.create<NestExpressApplication>(AppModule);
 
   app.useGlobalPipes(new ValidationPipe({ whitelist: true })); // whitelist: true - remove all properties that are not in the DTO
   app.useGlobalInterceptors(
