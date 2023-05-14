@@ -33,3 +33,9 @@ $ pnpm run test:e2e
 # test coverage
 $ pnpm run test:cov
 ```
+
+## Generate Resource
+
+```bash
+$ npx nest g resource
+```

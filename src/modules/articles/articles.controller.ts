@@ -14,6 +14,7 @@ import { CreateArticleDto } from './dto/create-article.dto';
 import { UpdateArticleDto } from './dto/update-article.dto';
 import { ApiTags, ApiCreatedResponse, ApiOkResponse } from '@nestjs/swagger';
 import { ArticleEntity } from './entities/article.entity';
+import { BizResponse } from '@app/interceptors/ResponseInterceptor';
 
 @Controller('articles')
 @ApiTags('articles')

@@ -14,10 +14,10 @@ export class ArticleEntity implements Article {
   @ApiProperty()
   id: number;
 
-  @ApiProperty()
+  @ApiProperty({description: '文章标题'}) // 在 Parameters - Responses - Schema 中展示
   title: string;
 
-  @ApiProperty()
+  @ApiProperty({description: '文章描述'})
   description: string;
 
   @ApiProperty()

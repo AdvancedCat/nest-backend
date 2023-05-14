@@ -12,7 +12,7 @@ export class CreateArticleDto {
   @IsString()
   @IsNotEmpty()
   @MinLength(5)
-  @ApiProperty()
+  @ApiProperty({description: '文章标题'})  // 在 Parameters - Request body - Schema 中展示
   title: string;
 
   @IsString()
