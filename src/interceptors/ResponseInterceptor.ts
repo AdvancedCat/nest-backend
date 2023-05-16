@@ -4,7 +4,6 @@ import {
   ExecutionContext,
   CallHandler,
 } from '@nestjs/common';
-import { Response } from 'express';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
@@ -22,12 +21,11 @@ export class ResponseInterceptor<T> implements NestInterceptor<T, BizResponse<T>
   ): Observable<BizResponse<T>> {
     const call$ = next.handle();
 
-    const response = context.switchToHttp().getResponse<Response>();
     return call$.pipe(
       map((data: any) => {
         return {
           code: 0,
-          message: response.statusMessage,
+          message: '请求成功',
           result: data,
         };
       }),
