@@ -11,7 +11,7 @@ import {
 
 /**
  * @class ErrorInterceptor
- * @classdesc catch error when controller Promise rejected
+ * @classdesc catch error when controller Promise rejected.
  */
 @Injectable()
 export class ErrorInterceptor implements NestInterceptor {
