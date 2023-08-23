@@ -21,6 +21,8 @@ $ pnpm run start:dev
 $ pnpm run start:prod
 ```
 
+http://localhost:3000
+
 ## Test
 
 ```bash
